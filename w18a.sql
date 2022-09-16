@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.62, for Win64 (AMD64)
 --
--- Host: localhost    Database: W18A
+-- Host: localhost    Database: w18a
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.6.9-MariaDB
 
@@ -56,8 +56,8 @@ DROP TABLE IF EXISTS `blogger`;
 CREATE TABLE `blogger` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL,
-  `password` varchar(100) COLLATE utf8mb4_bin DEFAULT NULL,
-  `name` varchar(100) COLLATE utf8mb4_bin DEFAULT NULL,
+  `password` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL,
+  `name` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL,
   `created_at` date DEFAULT NULL,
   `email` varchar(100) COLLATE utf8mb4_bin DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -86,7 +86,7 @@ DROP TABLE IF EXISTS `blogger_post`;
 CREATE TABLE `blogger_post` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `blogger_id` int(10) unsigned NOT NULL,
-  `content` varchar(100) COLLATE utf8mb4_bin DEFAULT NULL,
+  `content` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
   `title` varchar(100) COLLATE utf8mb4_bin DEFAULT NULL,
   `created_at` date DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -106,7 +106,7 @@ INSERT INTO `blogger_post` VALUES (1,1,'content_one','title_one','2022-01-01'),(
 UNLOCK TABLES;
 
 --
--- Dumping routines for database 'W18A'
+-- Dumping routines for database 'w18a'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -118,4 +118,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-15 14:21:00
+-- Dump completed on 2022-09-15 19:30:03
