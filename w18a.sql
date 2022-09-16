@@ -26,7 +26,7 @@ CREATE TABLE `blog_post_comment` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `blogger_id` int(10) unsigned NOT NULL,
   `blog_post_id` int(10) unsigned NOT NULL,
-  `content` varchar(100) COLLATE utf8mb4_bin DEFAULT NULL,
+  `content` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
   `created_at` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `blog_post_comment_FK` (`blogger_id`),
@@ -118,4 +118,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-15 19:30:03
+-- Dump completed on 2022-09-15 19:31:42
